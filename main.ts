@@ -41,5 +41,14 @@ basic.forever(function () {
     } else if (xiamiBoard.IR_read() == 1) {
         xiamiBoard.motorRun(MOTOR.M1, DIRECTION.CW, 80)
         xiamiBoard.motorRun(MOTOR.M2, DIRECTION.CW, 80)
+    } else if (xiamiBoard.IR_read() == 9) {
+        xiamiBoard.motorRun(MOTOR.M1, DIRECTION.CCW, 80)
+        xiamiBoard.motorRun(MOTOR.M2, DIRECTION.CCW, 80)
+    } else if (xiamiBoard.IR_read() == 4) {
+        xiamiBoard.motorRun(MOTOR.M1, DIRECTION.CW, 80)
+        xiamiBoard.motorRun(MOTOR.M2, DIRECTION.CCW, 80)
+    } else if (xiamiBoard.IR_read() == 6) {
+        xiamiBoard.motorRun(MOTOR.M1, DIRECTION.CCW, 80)
+        xiamiBoard.motorRun(MOTOR.M2, DIRECTION.CW, 80)
     }
 })

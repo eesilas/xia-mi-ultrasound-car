@@ -1,6 +1,3 @@
-input.onButtonPressed(Button.A, function () {
-    dance()
-})
 function dance () {
     xiamiBoard.motorRun(MOTOR.M1, DIRECTION.CW, 255)
     xiamiBoard.motorRun(MOTOR.M2, DIRECTION.CCW, 255)
@@ -34,6 +31,14 @@ basic.forever(function () {
         xiamiBoard.LED(0, 0, 1)
     } else {
         xiamiBoard.LED(0, 1, 1)
+        xiamiBoard.motorRun(MOTOR.M1, DIRECTION.CW, 80)
+        xiamiBoard.motorRun(MOTOR.M2, DIRECTION.CW, 80)
+    }
+})
+basic.forever(function () {
+    if (xiamiBoard.IR_read() == 5) {
+        dance()
+    } else if (xiamiBoard.IR_read() == 1) {
         xiamiBoard.motorRun(MOTOR.M1, DIRECTION.CW, 80)
         xiamiBoard.motorRun(MOTOR.M2, DIRECTION.CW, 80)
     }

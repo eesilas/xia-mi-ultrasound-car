@@ -17,7 +17,7 @@ basic.forever(function () {
     distance,
     255
     )
-    if (distance < 120) {
+    if (distance < 60) {
         xiamiBoard.motorRun(MOTOR.M1, DIRECTION.CCW, 150)
         xiamiBoard.motorRun(MOTOR.M2, DIRECTION.CCW, 150)
         xiamiBoard.LED(1, 0, 0)

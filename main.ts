@@ -18,21 +18,21 @@ basic.forever(function () {
     255
     )
     if (distance < 120) {
-        xiamiBoard.motorRun(MOTOR.M1, DIRECTION.CCW, 80)
-        xiamiBoard.motorRun(MOTOR.M2, DIRECTION.CCW, 80)
+        xiamiBoard.motorRun(MOTOR.M1, DIRECTION.CCW, 150)
+        xiamiBoard.motorRun(MOTOR.M2, DIRECTION.CCW, 150)
         xiamiBoard.LED(1, 0, 0)
         basic.pause(500)
-        xiamiBoard.motorRun(MOTOR.M1, DIRECTION.CW, 80)
-        xiamiBoard.motorRun(MOTOR.M2, DIRECTION.CCW, 80)
+        xiamiBoard.motorRun(MOTOR.M1, DIRECTION.CW, 150)
+        xiamiBoard.motorRun(MOTOR.M2, DIRECTION.CCW, 150)
         xiamiBoard.LED(1, 1, 0)
         basic.pause(1000)
-        xiamiBoard.motorRun(MOTOR.M1, DIRECTION.CW, 120)
-        xiamiBoard.motorRun(MOTOR.M2, DIRECTION.CW, 120)
+        xiamiBoard.motorRun(MOTOR.M1, DIRECTION.CW, 150)
+        xiamiBoard.motorRun(MOTOR.M2, DIRECTION.CW, 150)
         xiamiBoard.LED(0, 0, 1)
     } else {
         xiamiBoard.LED(0, 1, 1)
-        xiamiBoard.motorRun(MOTOR.M1, DIRECTION.CW, 80)
-        xiamiBoard.motorRun(MOTOR.M2, DIRECTION.CW, 80)
+        xiamiBoard.motorRun(MOTOR.M1, DIRECTION.CW, 150)
+        xiamiBoard.motorRun(MOTOR.M2, DIRECTION.CW, 150)
     }
 })
 basic.forever(function () {

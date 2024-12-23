@@ -9,7 +9,7 @@ basic.forever(function () {
     distance = pins.map(
     xiamiBoard.Ultrasonic(),
     0,
-    25,
+    180,
     0,
     255
     )
@@ -17,7 +17,7 @@ basic.forever(function () {
     distance,
     255
     )
-    if (distance < 80) {
+    if (distance < 120) {
         xiamiBoard.motorRun(MOTOR.M1, DIRECTION.CCW, 80)
         xiamiBoard.motorRun(MOTOR.M2, DIRECTION.CCW, 80)
         xiamiBoard.LED(1, 0, 0)
